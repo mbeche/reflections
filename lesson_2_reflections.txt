@@ -1,0 +1,22 @@
+Lesson 3 Git Reflections
+
+Reflections Question:
+What happens when you initialize a repository? Why do you need it?
+
+Initializing a repository creates the framework for git commits to go.
+On a literal level, it creates a hidden folder .git in the working directory
+and creates several files within this for states to be committed.
+
+Initializing a repository does not perform a first commit. We have to do that.
+
+Reflections Question:
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+
+The working directory contains all items that exist in a repository.
+The staging area lets you take items in your repository and commit changes to them.
+It's important to have these things separate, because sometimes you want to
+commit only one file, or multiple files together.  This allows for that flexibility.
+Also, having a separate repository from working directory is needed for git functionality.
+Udacity Git Commit Message Style Guide: http://udacity.github.io/git-styleguide/
+
