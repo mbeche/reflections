@@ -20,3 +20,32 @@ commit only one file, or multiple files together.  This allows for that flexibil
 Also, having a separate repository from working directory is needed for git functionality.
 Udacity Git Commit Message Style Guide: http://udacity.github.io/git-styleguide/
 
+You can compare your working directory with the staging area. Check it out!
+Note: Even when there no changes to stage, the staging area still contains
+the most recent commit. This is because the git add command does not wear off.
+
+git diff compares the working directory to the staging area
+git diff --staged compares the staging area to the most recent commit
+git diff commit1 commit2 compares the two commits (1&2)
+
+Reflections Question:
+How can you use the staging area to make sure you have one commit per logical change?
+
+After you make your changes to a file in the repository, you change the changes between
+that and the most recent commit (contained in the staging area) by using "git diff".
+Then, you stage the changes you want in that commit (maybe you changed more than one
+file but only want to change one, you only stage the one change). Then you can compare
+the staged commit with the most recent commit using "git diff --staged". This will show
+you the changes you will commit. After you commit, you can check that you only had one
+logical change by using the git diff commit1 commit2 command to compare the last two commits.
+
+Reflections Question:
+What are some situations when branches wold be helpful in keeping your history organized?
+How would branches help?
+
+I can see this being useful when I want to make a big change to try something new a different.
+The difference would need to be substantial or experimental.
+The technique would be useful when you want to quickly jump back and forth between iterations
+of your file.
+
+
