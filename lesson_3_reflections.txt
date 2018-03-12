@@ -1,0 +1,13 @@
+Final Lesson: GitHub
+
+Reflections Question:
+When would you want to use a remote repository rather than keeping all your work local?
+
+  I can think of several reasons why I would like to use github repository.
+    It lets me work on my code from any computer - I just need to log on!
+      It also serves as a backup in case I lose my computer or files get corrupted.
+    It allows me to share my work with other people.
+    I can use GitHub to host web pages so I can test them out on different devices
+      This could be useful for adaptive response, or sharing a working version with a client
+
+
