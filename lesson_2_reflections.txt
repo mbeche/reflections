@@ -46,6 +46,44 @@ How would branches help?
 I can see this being useful when I want to make a big change to try something new a different.
 The difference would need to be substantial or experimental.
 The technique would be useful when you want to quickly jump back and forth between iterations
-of your file.
+of your file. Helps keep the project organized. Master branch for the version that works.
+Extra branches for side projects that you think will break: experimental or developmental.
+Working on a feature and come accross a bug, or when you get bored with a feature, can go
+back and work on a different aspect.
+
+Reflections Question:
+How do diagrams help you visualize the branch structure?
+
+Drawing out a diagram can help you capture in your head what is happening along branches
+and in between branches. I can see this being especially useful when trying to convey
+your project flow to another person or to understand what's happening with a project
+you are new to but has many branches involved it.
+
+This diagram drawing also helped me understand how commits can become unreachable if
+they are not assigned a branch. It also helped me understand that the whole history line
+is not the branch, but only the leading head is the actual "branch" (with the name master, etc.)
+
+Note: If a branch is deleted and leaves some commits unreachable from existing branches, 
+those commits will continue to be accessible by commit id, until Git’s garbage collection runs. 
+This will happen automatically from time to time, unless you actively turn it off. 
+You can also run this process manually with git gc.
+
+Interesting note:
+I just made a change to my .bash_profile file and Git Bash opened up with an error.
+Luckily it was a small fix (I forgot to close quotation marks on an alias link),
+but I could have used Git to track changes to figure out where I went wrong!
+
+Reflections Question:
+What is the result of merging two branches together? 
+Why do we represent it in the diagram the way we do?
+
+Merging two branches combines the changes that occurred in both histories into one.
+The branch that you are in will retain the name of the merge whereas the branch
+you are merging from will be deleted (i think? According to my "git branch"
+result it appears I still have the coin branch...)
+
+Online Diagraming Tools:
+https://www.gliffy.com/
+https://yuml.me/diagram/activity/draw
 
 
