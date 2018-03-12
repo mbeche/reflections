@@ -77,13 +77,35 @@ Reflections Question:
 What is the result of merging two branches together? 
 Why do we represent it in the diagram the way we do?
 
-Merging two branches combines the changes that occurred in both histories into one.
+**Merging two branches combines the changes that occurred in both histories into one.
 The branch that you are in will retain the name of the merge whereas the branch
 you are merging from will be deleted (i think? According to my "git branch"
-result it appears I still have the coin branch...)
+result it appears I still have the coin branch...)**
 
 Online Diagraming Tools:
 https://www.gliffy.com/
 https://yuml.me/diagram/activity/draw
 
+Reflections Question:
+What are the pros and cons of Git's automatic merging vs always doing merges manually?
 
+First, I noticed automatic merges don't let you manually commit and create a message.
+Does this mean it doesn't create another step along the commit log?
+Also, what if I would have wanted to make some changes to my code when merging due
+to realizing some items were inconsistent (that Git merge did not catch). It would be
+nice to have the option to reflect.
+
+According to this forum I found: https://stackoverflow.com/questions/4657009/how-to-merge-all-files-manually-in-git
+
+There is much simpler way:
+	git merge --no-commit merge_branch
+With --no-commit perform the merge but pretend the merge failed and do not autocommit, 
+to give the user a chance to inspect and further tweak the merge result before committing.
+
+I had a scenario where:
+	git merge --no-commit merge_branch 
+just caused a Fast Forward.
+
+If this happens you can use:
+	git merge --no-commit --no-ff merge_branch
+and then you'll be able to review your changes
