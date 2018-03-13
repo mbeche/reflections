@@ -1,135 +1,136 @@
 Lesson 1 Git Command Review:
 
-Compare two commits, printing each line that is present in one commit but not the other.
-git diff will do this. It takes two arguments - the two commit ids to compare. 
+	Compare two commits, printing each line that is present in one commit but not the other.
+	git diff will do this. It takes two arguments - the two commit ids to compare. 
 
-Make a copy of an entire Git repository, including the history, onto your own computer.
-git clone will do this. It takes one argument - the url of the repository to copy. 
+	Make a copy of an entire Git repository, including the history, onto your own computer.
+	git clone will do this. It takes one argument - the url of the repository to copy. 
 
-Temporarily reset all files in a directory to their state at the time of a specific commit.
-git checkout will do this. It takes one argument - the commit ID to restore. 
+	Temporarily reset all files in a directory to their state at the time of a specific commit.
+	git checkout will do this. It takes one argument - the commit ID to restore. 
 
-Show the commits made in this repository, starting with the most recent.
-git log will do this. It doesn't take any arguments.
+	Show the commits made in this repository, starting with the most recent.
+	git log will do this. It doesn't take any arguments.
 
-Note to Self:
-I keep forgetting that git logs are listed out with the newest at the top
-and the oldest at the bottom. I keep seeing it in reverse order. I need to
-remember this order.
+		**Note to Self**
+		I keep forgetting that git logs are listed out with the newest at the top
+		and the oldest at the bottom. I keep seeing it in reverse order. I need to
+		remember this order.
 
-Order matters with git diff and its two arguments. 
-The first argument is the old and second is the new.
+	Order matters with git diff and its two arguments. 
+	**The first argument is the old and second is the new.
 
 Reflection Question:
 How did viewing a diff between two versions of a file 
 help you see the bug that was introduced?
 
-It was easy to see what changed by the + and - signs.
-When we were doing the inro activity with HTML, there were the
-obvious changes to the decription, however, it was hard to see the typo.
+	It was easy to see what changed by the + and - signs.
+	When we were doing the inro activity with HTML, there were the
+	obvious changes to the decription, however, it was hard to see the typo.
 
-With diff, it was easy to see vertically the change and then notice
-what typo had been committed.
+	With diff, it was easy to see vertically the change and then notice
+	what typo had been committed.
 
-I'm happy about this reflection and should check out these resources
-on why it's a good idea to do these types of reflections
-(I'm guessing it's similar to why it's a good idea
-to leave comments in your code!)
+	I'm happy about this reflection and should check out these resources
+	on why it's a good idea to do these types of reflections
+	(I'm guessing it's similar to why it's a good idea
+	to leave comments in your code!)
 
-Why reflect?
-https://sites.google.com/site/reflection4learning/why-reflect
+	Resources:
+		Why reflect?
+		https://sites.google.com/site/reflection4learning/why-reflect
 
-How Critical Reflection Triggers Transformative Learning:
-http://184.182.233.150/rid=1LW06D9V6-26428MK-1Z64/Mezirow's%20chapter,%20How%20Critical%20Refletion%20Triggers%20TL.pdf
+		How Critical Reflection Triggers Transformative Learning:
+		http://184.182.233.150/rid=1LW06D9V6-26428MK-1Z64/Mezirow's%20chapter,%20How%20Critical%20Refletion%20Triggers%20TL.pdf
 
 
-Notes:
-Most common method of version control: saving manually
-Some clouds like dropbox and drive have version control
-Wikipedia has version control as well.
+	Notes:
+	Most common method of version control: saving manually
+	Some clouds like dropbox and drive have version control
+	Wikipedia has version control as well.
 
 Reflection Question:
 How could having easy access to the entire history of a file
 make you a more efficient programmer in the long term?
 
-Having complete history to a file helps you track changes.
-This allows a programmer to figure out how the document has changed over time.
-If the program is behaving poorly, they can adjust back to a previous state.
-The programmer can also see how their style or knowledge has changed over time.
-If more than one programmer is working on the same file, it will also
-help figure out who's error may have made a program misbehave.
+	Having complete history to a file helps you track changes.
+	This allows a programmer to figure out how the document has changed over time.
+	If the program is behaving poorly, they can adjust back to a previous state.
+	The programmer can also see how their style or knowledge has changed over time.
+	If more than one programmer is working on the same file, it will also
+	help figure out who's error may have made a program misbehave.
 
-Notes on when to save changes. I'm deleting the heading to test Atom's Git reactions
-As a programmer, when would I want to have a version of my code saved?
- At regular intervals (e.g. every hour)
-	Saved versions may not make sense, but if you're forgetful, it's a good option
- Whenever a large enough change is made (e.g. 50 lines)
-	Same issue as prior, also doesn't give the advantage
- Whenever there is a long pause in editing
-	More logical options
- When you choose to save a version << allows checkpoints to be meaniningful
-	User error, but offers more flexibility
-If there was an option for "all of the above" I'd chose that!
+		Notes on when to save changes. I'm deleting the heading to test Atom's Git reactions
+		As a programmer, when would I want to have a version of my code saved?
+		 At regular intervals (e.g. every hour)
+			Saved versions may not make sense, but if you're forgetful, it's a good option
+		 Whenever a large enough change is made (e.g. 50 lines)
+			Same issue as prior, also doesn't give the advantage
+		 Whenever there is a long pause in editing
+			More logical options
+		 When you choose to save a version << allows checkpoints to be meaniningful
+			User error, but offers more flexibility
+		If there was an option for "all of the above" I'd chose that!
 
 Reflection Question:
 What do you think are the pros and cons of manually choosing when to create a commit, 
 like you do in Git, vs having versions automatically saved, like Google Docs does?
 
-Choosing to manually commit:
-Pros: You get to make commits at points that make sense.
-Cons: You may forget to commit.
+	Choosing to manually commit:
+	Pros: You get to make commits at points that make sense.
+	Cons: You may forget to commit.
 
-Having versions automatically saved:
-Pros: You don't need to try to remember
-Cons: The saves might not make sense - it could happen in the middle of a lines
+	Having versions automatically saved:
+	Pros: You don't need to try to remember
+	Cons: The saves might not make sense - it could happen in the middle of a lines
 
 Reflection Question:
 Why do you think that some version control systems, like Git, allow saving multiple
 files in one commit, while others, like Google Docs, treat each file separately?
 
-Some files should be linked because they are used together. For example a website may have
-index.html, syle.css and app.js that all get changed one at a time or together.
-In this case it would be a good idea to have them in one repository.
+	Some files should be linked because they are used together. For example a website may have
+	index.html, syle.css and app.js that all get changed one at a time or together.
+	In this case it would be a good idea to have them in one repository.
 
-However, other files might be stand alone, in which case you track changes
-for that file independently.
+	However, other files might be stand alone, in which case you track changes
+	for that file independently.
 
-I'd imagine Google Docs does not have the audience with enough interest in using
-repository track changes. It wold probably also be combersome. Also, usually documents
-are changed and tracked one at a time.
+	I'd imagine Google Docs does not have the audience with enough interest in using
+	repository track changes. It wold probably also be combersome. Also, usually documents
+	are changed and tracked one at a time.
 
 Reflection Question:
 How can you use the commands "git log" and "git diff" to view the history of files?
 
-By using the command git log you can look at committed changes that have been
-logged. Each log should contain a comment describing what changed in that commit.
-If you are interested in what happened during the commit #N, you would want to 
-compare it to commit #N-1. To do this you use the git diff command along with
-the IDs that you can copy and paste (using special key commands in whatever commnand
-line you're using - apparently it's crtl/shift + ins in my MINGW64 command prompt).
+	By using the command git log you can look at committed changes that have been
+	logged. Each log should contain a comment describing what changed in that commit.
+	If you are interested in what happened during the commit #N, you would want to 
+	compare it to commit #N-1. To do this you use the git diff command along with
+	the IDs that you can copy and paste (using special key commands in whatever commnand
+	line you're using - apparently it's crtl/shift + ins in my MINGW64 command prompt).
 
 Reflection Question:
 How might using version control make you more confident to make changes 
 that could break something?
 
-By using Git, we obtain freedom to try big changes without worrying about
-how to revert back to previous versions. This way we don't have to worry about
-breaking our code. Also, if we do break our code and don't (yet, perhaps) know
-how to fix it, we can revert to a previous state and make a new branch, leaving
-the broken code rest until we are ready to deal with it.
-https://www.youtube.com/watch?time_continue=45&v=THmul1MlYvI
+	By using Git, we obtain freedom to try big changes without worrying about
+	how to revert back to previous versions. This way we don't have to worry about
+	breaking our code. Also, if we do break our code and don't (yet, perhaps) know
+	how to fix it, we can revert to a previous state and make a new branch, leaving
+	the broken code rest until we are ready to deal with it.
+	https://www.youtube.com/watch?time_continue=45&v=THmul1MlYvI
 
 Reflection Question:
 Now that you have your workspace set up, what do yo want to try using Git for?
 
-Getting Git set up is really exciting. I downloaded a text editor "Atom" from
-GitHub that has Git integrated into it, so I'm really eager to find out how that
-works with the Git that I just installed. Are they separate or do they work together?
+	Getting Git set up is really exciting. I downloaded a text editor "Atom" from
+	GitHub that has Git integrated into it, so I'm really eager to find out how that
+	works with the Git that I just installed. Are they separate or do they work together?
 
-For now, I have set up notepad++ as my primary text editor using this command:
-git config --global core.editor "'C:/Program Files (x86)
-/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+	For now, I have set up notepad++ as my primary text editor using this command:
+	git config --global core.editor "'C:/Program Files (x86)
+	/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
 
-I'll go ahead an use Git Bash and Notepad++ for a while and then perhaps
-switch to Atom. We'll see how things go. I was using Atom to build some
-HTML and SASS/SCSS files. I can easily port them into Git/Notepad++ I think.
+	I'll go ahead an use Git Bash and Notepad++ for a while and then perhaps
+	switch to Atom. We'll see how things go. I was using Atom to build some
+	HTML and SASS/SCSS files. I can easily port them into Git/Notepad++ I think.

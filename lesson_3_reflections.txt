@@ -10,4 +10,30 @@ When would you want to use a remote repository rather than keeping all your work
     I can use GitHub to host web pages so I can test them out on different devices
       This could be useful for adaptive response, or sharing a working version with a client
 
+Reflections Question:
+Why might you want to always pull changes manually rather than having Git
+automatically stay up-to-date with your remote repository?
 
+	If you pulled changes automatically you might be in the middle of your own
+	code update and then get an update from the GitHub interupting or messing
+	up the code you are working on.
+	Also an update to the shared repository might alter the functionality
+	of the code you are working with. Or you may not know how to use this
+	new feature and need to learn how to use it.
+	
+Reflections Question:
+Describe the differences between forks, clones, and branches. 
+When would you use one instead of the other?
+
+	A clone would be used when you want to save a Git repository from GitHub
+	or to copy a repository on your computer to another location.
+	The drawback with clone, despite containing commit history and branches,
+	is that clone does not allow for authorship attribution.
+	Forking on GitHub does allow for authorship attribution, and then you
+	can cloan the fork so that you make changes on your computer and then
+	push changes back to GitHub.
+	Cloning would likely push back changes to the original author's GitHub
+	as suggested changes, which may not be your inteded goal.
+	Branching creates a different state, whether on a clone or a fork.
+	It is kind of a subset of forking and cloaning.
+	

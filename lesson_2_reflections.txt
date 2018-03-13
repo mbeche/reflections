@@ -3,109 +3,110 @@ Lesson 3 Git Reflections
 Reflections Question:
 What happens when you initialize a repository? Why do you need it?
 
-Initializing a repository creates the framework for git commits to go.
-On a literal level, it creates a hidden folder .git in the working directory
-and creates several files within this for states to be committed.
+	Initializing a repository creates the framework for git commits to go.
+	On a literal level, it creates a hidden folder .git in the working directory
+	and creates several files within this for states to be committed.
 
-Initializing a repository does not perform a first commit. We have to do that.
+	Initializing a repository does not perform a first commit. We have to do that.
 
 Reflections Question:
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
-The working directory contains all items that exist in a repository.
-The staging area lets you take items in your repository and commit changes to them.
-It's important to have these things separate, because sometimes you want to
-commit only one file, or multiple files together.  This allows for that flexibility.
-Also, having a separate repository from working directory is needed for git functionality.
-Udacity Git Commit Message Style Guide: http://udacity.github.io/git-styleguide/
+	The working directory contains all items that exist in a repository.
+	The staging area lets you take items in your repository and commit changes to them.
+	It's important to have these things separate, because sometimes you want to
+	commit only one file, or multiple files together.  This allows for that flexibility.
+	Also, having a separate repository from working directory is needed for git functionality.
+	Udacity Git Commit Message Style Guide: http://udacity.github.io/git-styleguide/
 
-You can compare your working directory with the staging area. Check it out!
-Note: Even when there no changes to stage, the staging area still contains
-the most recent commit. This is because the git add command does not wear off.
+	You can compare your working directory with the staging area. Check it out!
 
-git diff compares the working directory to the staging area
-git diff --staged compares the staging area to the most recent commit
-git diff commit1 commit2 compares the two commits (1&2)
+	**Note: Even when there no changes to stage, the staging area still contains
+	the most recent commit. This is because the git add command does not wear off.
+
+		git diff compares the working directory to the staging area
+		git diff --staged compares the staging area to the most recent commit
+		git diff commit1 commit2 compares the two commits (1&2)
 
 Reflections Question:
 How can you use the staging area to make sure you have one commit per logical change?
 
-After you make your changes to a file in the repository, you change the changes between
-that and the most recent commit (contained in the staging area) by using "git diff".
-Then, you stage the changes you want in that commit (maybe you changed more than one
-file but only want to change one, you only stage the one change). Then you can compare
-the staged commit with the most recent commit using "git diff --staged". This will show
-you the changes you will commit. After you commit, you can check that you only had one
-logical change by using the git diff commit1 commit2 command to compare the last two commits.
+	After you make your changes to a file in the repository, you change the changes between
+	that and the most recent commit (contained in the staging area) by using "git diff".
+	Then, you stage the changes you want in that commit (maybe you changed more than one
+	file but only want to change one, you only stage the one change). Then you can compare
+	the staged commit with the most recent commit using "git diff --staged". This will show
+	you the changes you will commit. After you commit, you can check that you only had one
+	logical change by using the git diff commit1 commit2 command to compare the last two commits.
 
 Reflections Question:
 What are some situations when branches wold be helpful in keeping your history organized?
 How would branches help?
 
-I can see this being useful when I want to make a big change to try something new a different.
-The difference would need to be substantial or experimental.
-The technique would be useful when you want to quickly jump back and forth between iterations
-of your file. Helps keep the project organized. Master branch for the version that works.
-Extra branches for side projects that you think will break: experimental or developmental.
-Working on a feature and come accross a bug, or when you get bored with a feature, can go
-back and work on a different aspect.
+	I can see this being useful when I want to make a big change to try something new a different.
+	The difference would need to be substantial or experimental.
+	The technique would be useful when you want to quickly jump back and forth between iterations
+	of your file. Helps keep the project organized. Master branch for the version that works.
+	Extra branches for side projects that you think will break: experimental or developmental.
+	Working on a feature and come accross a bug, or when you get bored with a feature, can go
+	back and work on a different aspect.
 
 Reflections Question:
 How do diagrams help you visualize the branch structure?
 
-Drawing out a diagram can help you capture in your head what is happening along branches
-and in between branches. I can see this being especially useful when trying to convey
-your project flow to another person or to understand what's happening with a project
-you are new to but has many branches involved it.
+	Drawing out a diagram can help you capture in your head what is happening along branches
+	and in between branches. I can see this being especially useful when trying to convey
+	your project flow to another person or to understand what's happening with a project
+	you are new to but has many branches involved it.
 
-This diagram drawing also helped me understand how commits can become unreachable if
-they are not assigned a branch. It also helped me understand that the whole history line
-is not the branch, but only the leading head is the actual "branch" (with the name master, etc.)
+	This diagram drawing also helped me understand how commits can become unreachable if
+	they are not assigned a branch. It also helped me understand that the whole history line
+	is not the branch, but only the leading head is the actual "branch" (with the name master, etc.)
 
-Note: If a branch is deleted and leaves some commits unreachable from existing branches, 
-those commits will continue to be accessible by commit id, until Git’s garbage collection runs. 
-This will happen automatically from time to time, unless you actively turn it off. 
-You can also run this process manually with git gc.
+	Note: If a branch is deleted and leaves some commits unreachable from existing branches, 
+	those commits will continue to be accessible by commit id, until Git’s garbage collection runs. 
+	This will happen automatically from time to time, unless you actively turn it off. 
+	You can also run this process manually with git gc.
 
-Interesting note:
-I just made a change to my .bash_profile file and Git Bash opened up with an error.
-Luckily it was a small fix (I forgot to close quotation marks on an alias link),
-but I could have used Git to track changes to figure out where I went wrong!
+	Interesting anecdote:
+	I just made a change to my .bash_profile file and Git Bash opened up with an error.
+	Luckily it was a small fix (I forgot to close quotation marks on an alias link),
+	but I could have used Git to track changes to figure out where I went wrong!
 
 Reflections Question:
 What is the result of merging two branches together? 
 Why do we represent it in the diagram the way we do?
 
-**Merging two branches combines the changes that occurred in both histories into one.
-The branch that you are in will retain the name of the merge whereas the branch
-you are merging from will be deleted (i think? According to my "git branch"
-result it appears I still have the coin branch...)**
+	**Merging two branches combines the changes that occurred in both histories into one.
+	The branch that you are in will retain the name of the merge whereas the branch
+	you are merging from will be deleted (i think? According to my "git branch"
+	result it appears I still have the coin branch...)**
 
-Online Diagraming Tools:
-https://www.gliffy.com/
-https://yuml.me/diagram/activity/draw
+	Online Diagraming Tools:
+	https://www.gliffy.com/
+	https://yuml.me/diagram/activity/draw
 
 Reflections Question:
 What are the pros and cons of Git's automatic merging vs always doing merges manually?
 
-First, I noticed automatic merges don't let you manually commit and create a message.
-Does this mean it doesn't create another step along the commit log?
-Also, what if I would have wanted to make some changes to my code when merging due
-to realizing some items were inconsistent (that Git merge did not catch). It would be
-nice to have the option to reflect.
+	First, I noticed automatic merges don't let you manually commit and create a message.
+	Does this mean it doesn't create another step along the commit log?
+	Also, what if I would have wanted to make some changes to my code when merging due
+	to realizing some items were inconsistent (that Git merge did not catch). It would be
+	nice to have the option to reflect.
 
-According to this forum I found: https://stackoverflow.com/questions/4657009/how-to-merge-all-files-manually-in-git
+	According to this forum I found: https://stackoverflow.com/questions/4657009/how-to-merge-all-files-manually-in-git
 
-There is much simpler way:
-	git merge --no-commit merge_branch
-With --no-commit perform the merge but pretend the merge failed and do not autocommit, 
-to give the user a chance to inspect and further tweak the merge result before committing.
+		There is much simpler way:
+			git merge --no-commit merge_branch
+		With --no-commit perform the merge but pretend the merge failed and do not autocommit, 
+		to give the user a chance to inspect and further tweak the merge result before committing.
 
-I had a scenario where:
-	git merge --no-commit merge_branch 
-just caused a Fast Forward.
+		I had a scenario where:
+			git merge --no-commit merge_branch 
+		just caused a Fast Forward.
 
-If this happens you can use:
-	git merge --no-commit --no-ff merge_branch
-and then you'll be able to review your changes
+		If this happens you can use:
+			git merge --no-commit --no-ff merge_branch
+		and then you'll be able to review your changes
