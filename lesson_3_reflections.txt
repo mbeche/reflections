@@ -37,3 +37,45 @@ When would you use one instead of the other?
 	Branching creates a different state, whether on a clone or a fork.
 	It is kind of a subset of forking and cloaning.
 	
+	Git commands for merging remote changes
+		These commands:
+			git fetch origin
+			git merge master origin/master
+				-or-
+			git pull origin master
+		Do the same thing. In fact, git pull origin master always does a 
+		fetch and merge but because origin master (on repository) is an 
+		ancestor of the working directory master, git performs a fast forward merge.
+			You can turn off fast forward merge with "--no-ff"
+
+Reflections Question:
+What is the benefit of having a copy of the last known state of the remote stored locally.
+
+	The major benefit of having your last pull accessible is the same reason that
+	you would want to compare your changes to the staged changes, or your changes
+	to the most recent commit. Once you are ready to push your changes, you can check
+	to see what you've changed on the local copy of your pull.
+	In the case that the GitHub repository has been changed, the locally saved sate
+	updated with git fetch origin, then you can clear any conflists with it and push it
+	it back to GitHub.
+	
+	Great summary video: https://www.youtube.com/watch?v=jOMom5aUfDM&feature=youtu.be
+	
+Reflections Question:
+How would you collaborate without using Git or GitHub? 
+What would be easier? What would be harder?
+
+	Git and GitHub definitely make collaboration easier and more streamlined.
+	Not only that but it helps with personal housekeeping and workflow.
+	I would love to use it in a collaborative enviroment.
+	
+	There's lots of nuances though. Using pull requests everytime you want
+	to make a change to master sounds like a great option. Albiet tedious!
+	This involved making a change in your branch and merging master into it,
+	then pushing it to GitHub to update a pull request that was made or
+	making your own https://www.youtube.com/watch?v=zk5LxYcZdPM
+	
+	Pull requests are a GitHub tool that allows you to request an author of a code
+	you've forked, or for you to send a request on another branch that you are working
+	on to make a change. This allows for the ownder (or collaborator) to review
+	the change you made, comment, accept, or reject.
